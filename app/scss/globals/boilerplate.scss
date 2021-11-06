@@ -1,3 +1,5 @@
+@use "../util/breakpoints.scss" as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -6,11 +8,72 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherot;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: var(--font-lato);
+  background-color: #eee;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+input, select {
+  border: none;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.active {
+  color: var(--active) !important;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.desktop-only {
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+}
+
+.mobile-only {
+  display: block;
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+.mb-8 {
+  margin-bottom: 8vw;
+}
+
+.has-arrow {
+  &::after {
+    content: '\00a0›'
+  }
 }

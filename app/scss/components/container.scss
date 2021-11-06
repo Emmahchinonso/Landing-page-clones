@@ -1,0 +1,24 @@
+.page {
+  max-width: 100rem;
+  min-height: 100vh;
+  margin: auto;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 80%;
+  width: 83.3125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  padding-bottom: 8vw;
+  border-bottom: 2px solid #eee;
+}

@@ -1,0 +1,22 @@
+@use "../util/breakpoints.scss" as *;
+
+.hero {
+  padding: 0 1rem;
+  display: grid;
+  place-items: center;
+  background-image: url("https://ableton-production.imgix.net/about/header.jpg?auto=format&dpr=2.0&fit=crop&fm=jpg&h=514&ixjsv=1.1.3&q=50&w=941");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 690px;
+}
+
+.hero__title{
+  font-size: 8rem;
+  color: rgb(251, 90, 72);
+  font-weight: 600;
+
+  @include breakpoint-down(small) {
+    font-size: 4rem;
+  }
+}
