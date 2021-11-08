@@ -122,26 +122,29 @@
 
     .nav-list__item--more {
       color: var(--orange);
-      position: relative;
       background: none;
+      display: inline-flex;
+      align-items: center;
+
+      .more-icon{
+        position: relative;
+        margin-left: 0.5rem;
+        width: 0.7rem;
+        height: 2px;
+        display: inline-block;
+      }
 
       .more-icon::after, .more-icon::before {
         content: '';
         position: absolute;
-        width: 0.7rem;
-        height: 2px;
+        width: 100%;
+        left: 0;
+        height: 100%;
         background: var(--orange);
       }
 
       .more-icon::before {
-        transform: translateY(0.6rem) rotate(90deg);
-        right: -1.05rem;
-      }
-
-      .more-icon::after {
-        top: 50%;
-        transform: translateY(-50%);
-        right: -1rem;
+        transform: rotate(90deg);
       }
 
       &.isOpened .more-icon::before{
@@ -166,6 +169,7 @@
   z-index: 1000;
   background: rgba(255, 255, 255, 0.7);
   transition: transform 0.5s ease-in;
+  font-weight: 500;
 
   a {
     font-size: 0.9rem;
