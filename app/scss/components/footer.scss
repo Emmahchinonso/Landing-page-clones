@@ -111,27 +111,35 @@
   display: flex;
   padding-top: 1rem;
 
-  i {
-    margin-right: 1rem;
-    color: #fff;
-    font-size: 2rem;
-    padding: 0.5rem;
+  a {
+    margin-right: 0.7rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .fa-facebook {
+  i {
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .facebook {
     background-color: #3278f2;
   }
 
-  .fa-twitter {
+  .twitter {
     background-color: #1da1f3;
   }
 
-  .fa-youtube {
+  .youtube {
     background-color: #e20e24;
   }
 
-  .fa-instagram {
-    background-color: #e18755;
+  .instagram {
+    background-color: #f77736;
   }
 }
 
