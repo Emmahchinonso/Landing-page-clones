@@ -32,14 +32,14 @@
   @include breakpoint(large) {
     font-size: 1.875rem;
   }
+}
 
-  & + .section-text__body {
-    font-size: 1rem;
-    line-height: 1.6;
-  
-    @include breakpoint(large) {
-      font-size: 1.25rem;
-    }
+.section-text__body {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  @include breakpoint(large) {
+    font-size: 1.25rem;
   }
 }
 

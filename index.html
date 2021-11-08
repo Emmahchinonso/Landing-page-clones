@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/e2335626de.js" crossorigin="anonymous"></script>
 
     <link 
@@ -28,70 +32,112 @@
     <div class="page">
       <header class="header">
         <nav class="nav js-nav">
-          <a class="logo" href="/">
-            <svg role="img" aria-labelledby="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 21">
-              <path d="M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z"></path>
-            </svg>
-          </a>
-          <button class="nav__button mobile-only js-menu-btn">Menu</button>
-          <div class="nav-list">
-            <div class="nav-list__primary">
-              <div>
-                <a class="nav-list__item" href="">Live</a>
-                <a class="nav-list__item" href="">Push</a>
-                <a class="nav-list__item" href="#">Link</a>
-                <a class="nav-list__item" href="#">Shop</a>
-                <a class="nav-list__item" href="#">Pack</a>
-                <a class="nav-list__item" href="#">Help</a>
-              </div>
-              <div>
-                <a class="nav-list__item" href="">Try Live for free</a>
-                <a class="nav-list__item nav-list__item--register" href="#">Log in or register</a>
-              </div>
-            </div>
-            <div class="more">
-              <div class="more-main">
-                <p class="more__title">More on Ableton.com:</p>
-                <div class="more-main__item">
-                  <a href="">Blog</a>
-                  <a href="">Ableton for the Classroom</a>
-                  <a href="">Ableton for Colleges and Universities</a>
-                  <a href="">Certified Training</a>
-                  <a class="active" href="">About Ableton</a>
-                  <a href="#">Jobs</a>
+          <div class="nav__inner">
+            <a class="logo" href="/">
+              <svg role="img" aria-labelledby="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 21">
+                <path d="M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z"></path>
+              </svg>
+            </a>
+            <button class="nav__button mobile-only js-menu-btn">Menu</button>
+            <div class="nav-list">
+              <div class="nav-list__primary">
+                <div class="nav-list__right">
+                  <a class="nav-list__item" href="">Live</a>
+                  <a class="nav-list__item" href="">Push</a>
+                  <a class="nav-list__item" href="#">Link</a>
+                  <a class="nav-list__item" href="#">Shop</a>
+                  <a class="nav-list__item" href="#">Pack</a>
+                  <a class="nav-list__item" href="#">Help</a>
+                  <button class="nav-list__item nav-list__item--more js-more-btn" href="#">
+                    <span>More</span>
+                    <span class="more-icon"></span>
+                  </button>
+                </div>
+                <div class="nav-list__right">
+                  <a class="nav-list__item nav-list__item--blue" href="">Try Live for free</a>
+                  <a class="nav-list__item nav-list__item--register" href="#">Log in or register</a>
                 </div>
               </div>
-              <div class="more-next">
-                <p class="more__title">More from Ableton:</p>
-                <div class="more-next__list">
-                  <div class="more-next__wrapper">
-                    <section class="more-next__item">
-                      <h3>Loop</h3>
-                      <p>Watch Talks, Performances and Features from Ableton's Summit for Music Makers</p>
-                    </section>
-                    <section class="more-next__item">
-                      <h3>Learning music</h3>
-                      <p>Learn the fundamentals of music making right in your browser.</p>
-                    </section>
-                    <section class="more-next__item">
-                      <h3>Learning Synths</h3>
-                      <p>Get started with synthesis using a web-based synth and accompanying lessons.</p>
-                    </section>
-                    <section class="more-next__item">
-                      <h3>Making Music</h3>
-                      <p>Some tips from 74 Creative Strategies for Electronic Producers.</p>
-                    </section>
+              <div class="more more--mobile">
+                <div class="more-main">
+                  <p class="more__title">More on Ableton.com:</p>
+                  <div class="more-main__item">
+                    <a href="">Blog</a>
+                    <a href="">Ableton for the Classroom</a>
+                    <a href="">Ableton for Colleges and Universities</a>
+                    <a href="">Certified Training</a>
+                    <a class="active" href="">About Ableton</a>
+                    <a href="#">Jobs</a>
+                  </div>
+                </div>
+                <div class="more-next">
+                  <p class="more__title">More from Ableton:</p>
+                  <div class="more-next__list">
+                    <div class="more-next__wrapper">
+                      <section class="more-next__item">
+                        <h3>Loop</h3>
+                        <p>Watch Talks, Performances and Features from Ableton's Summit for Music Makers</p>
+                      </section>
+                      <section class="more-next__item">
+                        <h3>Learning music</h3>
+                        <p>Learn the fundamentals of music making right in your browser.</p>
+                      </section>
+                      <section class="more-next__item">
+                        <h3>Learning Synths</h3>
+                        <p>Get started with synthesis using a web-based synth and accompanying lessons.</p>
+                      </section>
+                      <section class="more-next__item">
+                        <h3>Making Music</h3>
+                        <p>Some tips from 74 Creative Strategies for Electronic Producers.</p>
+                      </section>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="more js-more more--desktop">
+            <div class="more-main">
+              <p class="more__title">More on Ableton.com:</p>
+              <div class="more-main__item">
+                <a href="">Blog</a>
+                <a href="">Ableton for the Classroom</a>
+                <a href="">Ableton for Colleges and Universities</a>
+                <a href="">Certified Training</a>
+                <a class="active" href="">About Ableton</a>
+                <a href="#">Jobs</a>
+              </div>
+            </div>
+            <div class="more-next">
+              <p class="more__title">More from Ableton:</p>
+              <div class="more-next__list">
+                <div class="more-next__wrapper">
+                  <section class="more-next__item">
+                    <h3>Loop</h3>
+                    <p>Watch Talks, Performances and Features from Ableton's Summit for Music Makers</p>
+                  </section>
+                  <section class="more-next__item">
+                    <h3>Learning music</h3>
+                    <p>Learn the fundamentals of music making right in your browser.</p>
+                  </section>
+                  <section class="more-next__item">
+                    <h3>Learning Synths</h3>
+                    <p>Get started with synthesis using a web-based synth and accompanying lessons.</p>
+                  </section>
+                  <section class="more-next__item">
+                    <h3>Making Music</h3>
+                    <p>Some tips from 74 Creative Strategies for Electronic Producers.</p>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
-        <div class="nav-secondary">
-          <a class="active" href="#">About</a>
-          <a href="#">Jobs</a>
-        </div>
       </header>
+      <div class="nav-secondary js-nav-secondary">
+        <a class="active" href="#">About</a>
+        <a href="#">Jobs</a>
+      </div>
       <main class="main mb-8">
         <div class="hero container mb-8">
           <h1 class="hero__title">Ableton</h1>

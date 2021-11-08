@@ -1,5 +1,6 @@
+@use "../util/breakpoints.scss" as *;
+
 .nav {
-  display: flex;
   padding: 1.2rem 2rem;
   border-bottom: 2px solid #eee;
 
@@ -24,6 +25,10 @@
       transform: translateY(0)
     }
   }
+}
+
+.nav__inner {
+  display: flex;
 }
 
 .logo {
@@ -80,6 +85,144 @@
   &__item--register{
     font-size: 0.875rem;
   }
+
+  .nav-list__item--more {
+    display: none;
+
+    @include breakpoint(large) {
+      display: inline-block;
+    }
+  }
+
+  @include breakpoint(large) {
+    position: initial;
+    transform: initial;
+    background-color: #fff;
+    color: #000;
+    padding: 0.2rem 0 0 1rem;
+    transition: none;
+
+    a {
+      color: #000;
+      display: initial;
+    }
+
+    &__item {
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .nav-list__item--blue {
+      color: var(--blue)
+    }
+
+   &__item:not(:last-child){
+      margin-right: 1.3rem;
+    }
+
+    .nav-list__item--more {
+      color: var(--orange);
+      position: relative;
+      background: none;
+
+      .more-icon::after, .more-icon::before {
+        content: '';
+        position: absolute;
+        width: 0.7rem;
+        height: 2px;
+        background: var(--orange);
+      }
+
+      .more-icon::before {
+        transform: translateY(0.6rem) rotate(90deg);
+        right: -1.05rem;
+      }
+
+      .more-icon::after {
+        top: 50%;
+        transform: translateY(-50%);
+        right: -1rem;
+      }
+
+      &.isOpened .more-icon::before{
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.nav-list__primary {
+  @include breakpoint(large) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav-secondary {
+  padding: 1rem 0 1rem 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.5s ease-in;
+
+  a {
+    font-size: 0.9rem;
+  }
+  .active {
+    margin-right: 1.5rem;
+  }
+}
+
+.more--mobile {
+  .more-next__wrapper {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 40px;
+      background-image: linear-gradient(90deg, rgba(0,0,255,0), var(--blue));
+    }
+  }
+
+  @include breakpoint(large) {
+    display: none;
+
+  }
+}
+
+.more--desktop {
+  display: none;
+
+  @include breakpoint(large) {
+    padding-top: 2rem;
+
+    &.isOpened {
+      display: block;
+    }
+
+    .more-main__item {
+      display: flex;
+    }
+
+    .more__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 0.3rem;
+    }
+
+    .more-main {
+      a {
+        font-size: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .more__title {
@@ -92,6 +235,7 @@
 
   a {
     font-size: 0.85rem;
+    line-height: 1.5;
     margin-bottom: 1rem;
   }
 }
@@ -105,41 +249,24 @@
 .more-next__wrapper {
   display: flex;
   position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 40px;
-    background-image: linear-gradient(90deg, rgba(0,0,255,0), var(--blue));
-  }
 }
+
 
 .more-next__item {
   min-width: 200px;
   font-size: 0.875rem;
   margin-right: 1.5rem;
+  line-height: 1.5rem;
 
   h3 {
     font-size: 0.875rem;
-    margin-bottom: 0.5rem;
   }
-}
 
-// .nav-list__primary {
-  
-// }
+  @include breakpoint(large) {
+    font-size: 1rem;
 
-.nav-secondary {
-  padding: 1rem 0 0 2rem;
-  margin-bottom: 2rem;
-
-  a {
-    font-size: 0.9rem;
-  }
-  .active {
-    margin-right: 1.5rem;
+    h3 {
+      font-size: 1rem;
+    }
   }
 }
