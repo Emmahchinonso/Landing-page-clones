@@ -28,6 +28,10 @@
 }
 
 .footer__row {
+  .footer__subtitle {
+    font-weight: 500;
+  }
+
   @include breakpoint(large) {
     display: flex;
 
@@ -41,10 +45,6 @@
 
     .footer__col {
       flex: 1;
-    }
-
-    .footer__subtitle{
-      font-weight: 700;
     }
 
     .footer__col--email, .footer__col--language{
@@ -75,12 +75,15 @@
   display: flex;
   flex-direction: column;
 
+  a {
+    font-weight: 500;
+  }
+
   @include breakpoint(large){
     flex-direction: row;
 
     a {
       margin-right: 1rem;
-      font-weight: 600;
       font-size: 0.875rem;
     }
   }
@@ -92,7 +95,7 @@
   margin-top: 8vw;
 
   p {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .logo {
@@ -156,7 +159,7 @@
   select {
     padding: 0.5rem;
     background-color: #eee;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
