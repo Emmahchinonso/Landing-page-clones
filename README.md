@@ -7,7 +7,7 @@ couldn't get the free version of futura fonts.
 
 I'll be building more landing pages in the future, this is my first project in my series of learning to be comfortable with css.
 
-Original version [link](https://www.ableton.com/en/about/)
+[Original version](https://www.ableton.com/en/about/)
 
-My clone [link]()
+[My clone](https://aboutableton.netlify.app/)
 
